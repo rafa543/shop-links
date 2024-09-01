@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, CardMedia, CardContent, Typography, Button, Grid, Box } from '@mui/material';
 import { styled } from '@mui/system';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import { useNavigate } from 'react-router-dom';
+
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: '#FF9800',
@@ -23,7 +25,13 @@ const StyledButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-function PromotionItem({ image, title, pricePix, priceCard }) {
+function PromotionItem({ id, image, title, pricePix, priceCard }) {
+  const navigate = useNavigate();
+  
+  const handleItemClick = (item) => {
+    navigate(`/produto/${item}`);
+  };
+
   return (
     <Card sx={{ maxWidth: '100%', margin: '16px auto' }}>
       <CardMedia
@@ -62,7 +70,7 @@ function PromotionItem({ image, title, pricePix, priceCard }) {
             Preço no cartão: {priceCard}
           </Typography>
         </Box>
-        <Box textAlign="center" mt={2} >
+        <Box textAlign="center" mt={2} onClick={() => handleItemClick(id)}>
           <StyledButton variant="contained" sx={{lineHeight: 1.2}}> 
             Pegar Promoção
           </StyledButton>

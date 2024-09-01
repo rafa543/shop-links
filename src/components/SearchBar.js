@@ -3,6 +3,7 @@ import { TextField, InputAdornment, Box, List, ListItem, ListItemText, ListItemA
 import SearchIcon from '@mui/icons-material/Search';
 import { styled } from '@mui/system';
 import { items } from '../produtos'; // Importa a lista de produtos
+import { useNavigate } from 'react-router-dom';
 
 const StyledTextField = styled(TextField, {
   shouldForwardProp: (prop) => prop !== 'noBoxShadow',
@@ -33,6 +34,11 @@ const StyledTextField = styled(TextField, {
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const navigate = useNavigate();
+
+  const handleItemClick = (item) => {
+    navigate(`/produto/${item.id}`, { state: { item } });
+  };
 
   const handleSearch = (event) => {
     const value = event.target.value;
@@ -48,15 +54,26 @@ function SearchBar() {
     }
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleRedirect();
+    }
+  };
+
+  const handleRedirect = () => {
+    navigate(`/results?q=${searchTerm}`, { state: { searchResults } });
+  };
+
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-      <Box sx={{ display: 'flex', zIndex: 1000, justifyContent: { xs: 'center', md: 'flex-end' }, width: '100%' }}>
+    <Box sx={{ width: '100%', maxWidth: '1300px', margin: '0 auto', marginBottom: '20px' }}>
+      <Box sx={{ paddingBottom: {xs: '0px', md: '0px'}, zIndex: 1000 }}>
         <StyledTextField
           variant="outlined"
           placeholder="Busque um produto..."
           value={searchTerm}
           onChange={handleSearch}
-          noBoxShadow={searchResults.length > 0} // Passa a prop para controlar o box-shadow
+          onKeyDown={handleKeyDown}
+          noBoxShadow={searchResults.length > 0}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -64,13 +81,23 @@ function SearchBar() {
               </InputAdornment>
             ),
           }}
-          sx={{ width: '100%', padding: { xs: '0px 10px 10px 10px', lg: '0px' } }}
+          sx={{ width: '100%',  }}
         />
       </Box>
+        <Box sx={{ }}>
       {searchResults.length > 0 && (
-        <List sx={{ zIndex: 999, position: 'absolute', top: 36, borderRadius: '0px 0px 10px 10px', bgcolor: 'background.paper', color: 'black' }}>
+        <List sx={{  zIndex: 999, bottom: '15px', position: 'relative',  borderRadius: '0px 0px 10px 10px', bgcolor: 'background.paper', color: 'black',
+          '& .MuiListItem-root': {
+            transition: 'all 0.3s ease',
+            '&:hover': {
+              transform: 'translateY(-2px)',
+              cursor: 'pointer',
+              bgcolor: 'grey.200',
+            },
+          },
+         }}>
           {searchResults.map((item, index) => (
-            <ListItem key={index} alignItems="flex-start">
+            <ListItem key={index} alignItems="flex-start" onClick={() => handleItemClick(item)}>
               <ListItemAvatar>
                 <Avatar alt={item.title} src={item.image} />
               </ListItemAvatar>
@@ -79,6 +106,7 @@ function SearchBar() {
           ))}
         </List>
       )}
+      </Box>
     </Box>
   );
 }

@@ -13,18 +13,27 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import SearchBar from './SearchBar';
+import { useNavigate } from 'react-router-dom';
 
-const pages = ['Tecnologia', 'Beleza', 'Moda e esporte', 'casa', 'eletro', 'moveis'];
+const pages = ['tecnologia', 'beleza', 'moda esporte', 'casa', 'eletro', 'moveis'];
 
 function ResponsiveAppBar() {
+  const navigate = useNavigate();
+  
+  const handleItemClick = (item) => {
+    navigate(`/produtos/${item}`);
+  };
+  const handleItemClickUrl = (item) => {
+    navigate(`${item}`);
+  };
 
   return (
     <AppBar position="static" sx={{ width: '100%', backgroundColor: '#11101D' }}>
       <Container maxWidth={false} sx={{ padding: 0 }}>
         <Toolbar disableGutters sx={{ width: '100%',  justifyContent: 'center', flexDirection: { xs: 'column', md: 'row'}, flexWrap: {xs: 'wrap', md: 'wrap',  lg: 'nowrap'}}}>
 
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', md: 'space-between' }, marginTop: {xs: "16px", md: "0px"}}}>
-            <AdbIcon sx={{ display: 'flex', mr: 1 }} />
+          <Box onClick={() => handleItemClickUrl("/")} sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', md: 'space-between' }, marginTop: {xs: "16px", md: "0px"}}}>
+            <AdbIcon sx={{ display: 'flex', mr: 1 }} cursor="pointer"/>
             <Typography
               variant="h6"
               noWrap
@@ -37,6 +46,7 @@ function ResponsiveAppBar() {
                 letterSpacing: '.3rem',
                 color: 'inherit',
                 textDecoration: 'none',
+                cursor: 'pointer'
               }}
             >
               SHOPLINKS
@@ -52,13 +62,13 @@ function ResponsiveAppBar() {
             marginBottom: {xs: '4px'}
             }}>
             {pages.map((page) => (
-              <Button key={page} sx={{  color: 'white', display: 'block' }}>
+              <Button key={page} sx={{  color: 'white', display: 'block' }} onClick={() => handleItemClick(page)}>
                 {page}
               </Button>
             ))}
           </Box>
 
-          <SearchBar />
+          {/* <SearchBar /> */}
 
         </Toolbar>
       </Container>

@@ -1,13 +1,16 @@
 import React from 'react';
 import { Box, Grid } from '@mui/material';
 import PromotionItem from './components/PromotionItem';
-import { items } from './produtos';
+import { items } from './produtos'; 
 
-function PromotionList() {
+function ProductsListCategories({categoria}) {
+  // Filtra os itens com base na categoria
+  const produtos = items.filter(item => item.categorias.includes(categoria));
+  
   return (
     <Box sx={{ width: '100%', maxWidth: '1300px', margin: '0 auto' }}>
       <Grid container spacing={2} justifyContent="center">
-        {items.map((item, index) => (
+        {produtos.map((item, index) => (
           <Grid item xs={6} sm={4} md={2} key={index}>
             <PromotionItem
               id={item.id}
@@ -23,4 +26,4 @@ function PromotionList() {
   );
 }
 
-export default PromotionList;
+export default ProductsListCategories;
