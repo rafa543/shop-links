@@ -1,14 +1,14 @@
 import { ThemeProvider } from '@mui/material/styles';
-import globalStyles from './globalStyles'; 
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import ResponsiveAppBar from './components/ResponsiveAppBar';
-import theme from './theme'; 
 import ImageCarousel from './components/ImageCarousel';
-import PromotionList from './PromotionList';
-import SearchBar from './components/SearchBar';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ProductDetails from './components/ProductDetails';
 import ProdutosDeUmaCategoria from './components/ProdutosDeUmaCategoria';
+import ResponsiveAppBar from './components/ResponsiveAppBar';
+import SearchBar from './components/SearchBar';
+import globalStyles from './globalStyles';
+import PromotionList from './PromotionList';
+import theme from './theme';
 
 function App() {
   return (

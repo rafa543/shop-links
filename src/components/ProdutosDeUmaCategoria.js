@@ -1,7 +1,6 @@
-import { useParams } from "react-router-dom";
-import SearchBar from "./SearchBar";
-import ProductsListCategories from "../ProductsListCategories";
 import { Box, Typography } from "@mui/material";
+import { useParams } from "react-router-dom";
+import ProductsListCategories from "../ProductsListCategories";
 import ResponsiveAppBar from "./ResponsiveAppBar";
 
 function ProdutosDeUmaCategoria() {

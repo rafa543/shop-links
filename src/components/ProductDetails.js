@@ -1,7 +1,7 @@
-import { Box, Button, Container, Typography } from "@mui/material";
-import { useLocation, useParams } from "react-router-dom";
-import { styled } from "@mui/system";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import { Box, Button, Container, Typography } from "@mui/material";
+import { styled } from "@mui/system";
+import { useParams } from "react-router-dom";
 import { items } from "../produtos";
 import ResponsiveAppBar from "./ResponsiveAppBar";
 
