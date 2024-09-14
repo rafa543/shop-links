@@ -1,90 +1,29 @@
 export const items = [
   {
     id: 1,
-    image: 'https://a-static.mlcdn.com.br/280x210/jogo-de-tacas-de-vidro-330ml-6-pecas-haus-bico-de-jaca-empire/magazineluiza/142270300/6794c56b24cb273f4637ccf2a1cad818.jpg',
-    title: 'Samsung Galaxy S23 FE 5G Smartphone Android 256GB Creme',
-    pricePix: 'R$ 50,00',
-    priceCard: 'R$ 55,00',
-    categorias: ['casa']
+    image: 'https://a-static.mlcdn.com.br/800x560/smart-tv-32-full-hd-led-tcl-32s5400a-android-wi-fi-bluetooth-google-assistente-2-hdmi-1-usb/magazineluiza/237863300/bf4634716f6c15a499f6972b915f3462.jpg',
+    title: 'Smart TV Full HD LED TCL 32, 40, 43 S5400A Android',
+    pricePix: 'R$ 1.424,05',
+    priceCard: 'R$ 1.499,00 em 8x de R$ 187,38 sem juros',
+    categorias: ['tecnologia', 'casa'],
+    link: 'https://divulgador.magalu.com/n3MVWHUp'
   },
   {
     id: 2,
-    image: 'https://a-static.mlcdn.com.br/280x210/celular-samsung-galaxy-s23-5g-512gb-8gb-ram-camera-tripla-50mp-12-10-tela-infinita-de-6-1/samsung/5530/6ce44c32ba397f39d05e2a371f2d7beb.jpeg',
-    title: 'Celular Samsung Galaxy S23 5G, 512GB, 8GB RAM, Câmera Tripla 50MP+12+10, Tela Infinita de 6.1"',
-    pricePix: 'R$ 70,00',
-    priceCard: 'R$ 75,00',
-    categorias: ['casa']
+    image: 'https://a-static.mlcdn.com.br/800x560/smart-tv-65-uhd-4k-led-samsung-65cu7700-wi-fi-bluetooth-alexa-3-hdmi/magazineluiza/237016300/b0b13b931779a0714d2c5b94815ec9eb.jpg',
+    title: 'Smart TV UHD 4K LED Samsung CU7700 - Wi-Fi Bluetooth Alexa 3 HDMI',
+    pricePix: 'R$ 2.754,05',
+    priceCard: 'R$ 2.899,00 em 10x de R$ 289,90 sem juros',
+    categorias: ['tecnologia', 'casa'],
+    link: 'https://divulgador.magalu.com/kP1lZr4V'
   },
   {
     id: 3,
-    image: 'https://a-static.mlcdn.com.br/280x210/samsung-galaxy-s23-fe-5g-smartphone-android-256gb-creme/magazineluiza/237985700/ae97622bedbcc8a51522ea5d1d7075fd.jpg',
-    title: 'Filtro de Linha 6 Tomadas Preto ou Branco Régua 110/220v Bivolt Universal C/ Protetor Descarga de Energia - OPEN ZEE',
-    pricePix: 'R$ 90,00',
-    priceCard: 'R$ 95,00',
-    categorias: ['casa']
-  },
-  {
-    id: 4,
-    image: 'https://a-static.mlcdn.com.br/280x210/mini-fone-de-ouvido-sem-fio-bluetooth-5-0-atender-chamada-v9/shopniz/14905768908/5952676f52e2a8654d4cae22103677db.jpeg',
-    title: 'Mini Fone De Ouvido Sem Fio Bluetooth 5.0 Atender Chamada V9',
-    pricePix: 'R$ 90,00',
-    priceCard: 'R$ 95,00',
-    categorias: ['tecnologia']
-  },
-  {
-    id: 5,
-    image: 'https://a-static.mlcdn.com.br/280x210/filtro-de-linha-6-tomadas-preto-ou-branco-regua-110-220v-bivolt-universal-c-protetor-descarga-de-energia-open-zee/ricari/cc-0001-6b/f09f0d04c797ad69d8592eddea340e68.jpeg',
-    title: 'Mini Fone De Ouvido Sem Fio Bluetooth 5.0 Atender Chamada V9',
-    pricePix: 'R$ 90,00',
-    priceCard: 'R$ 95,00',
-    categorias: ['tecnologia']
-  },
-  {
-    id: 6,
-    image: 'https://a-static.mlcdn.com.br/280x210/relogio-smartwatch-inteligente-hw12-40mm-android-ios-bluetooth-pulseira-metal-extra-smart-bracelet/ideconnect/243e76a2258f11eca3214201ac185013/225e67092d2fdca5c4124d2496b49caf.jpeg',
-    title: 'Mini Fone De Ouvido Sem Fio Bluetooth 5.0 Atender Chamada V9',
-    pricePix: 'R$ 90,00',
-    priceCard: 'R$ 95,00',
-    categorias: ['tecnologia']
-  },
-  {
-    id: 7,
-    image: 'https://a-static.mlcdn.com.br/280x210/smart-tv-samsung-50-crystal-uhd-4k-50cu8000-2023-design-airslim-painel-dynamic-crystal-color-tela/samsung/4484/18928c77c85cbea78b16b19e8699fdcf.jpeg',
-    title: 'Mini Fone De Ouvido Sem Fio Bluetooth 5.0 Atender Chamada V9',
-    pricePix: 'R$ 90,00',
-    priceCard: 'R$ 95,00',
-    categorias: ['tecnologia']
-  },
-  {
-    id: 8,
-    image: 'https://a-static.mlcdn.com.br/280x210/fone-de-ouvido-bluetooth-orelha-gatinho-infantil-led-sem-fio-cat-ear/arteprimacasaeconforto/149-rosa/ed3b9b79ba5de61fc86dc3e724a3718e.jpeg',
-    title: 'Mini Fone De Ouvido Sem Fio Bluetooth 5.0 Atender Chamada V9',
-    pricePix: 'R$ 90,00',
-    priceCard: 'R$ 95,00',
-    categorias: ['tecnologia']
-  },
-  {
-    id: 9,
-    image: 'https://a-static.mlcdn.com.br/280x210/carregador-portatil-power-bank-compativel-com-entrada-usb-booglee/boogleecombr/15941421574/dec71399acbb1707003be4b59de90416.jpeg',
-    title: 'Mini Fone De Ouvido Sem Fio Bluetooth 5.0 Atender Chamada V9',
-    pricePix: 'R$ 90,00',
-    priceCard: 'R$ 95,00',
-    categorias: ['tecnologia']
-  },
-  {
-    id: 10,
-    image: 'https://a-static.mlcdn.com.br/280x210/radio-portatil-am-fm-a-pilha-e-energia-usb-recarregavel-bluetooth-inboxmobile/inboxmobile/rfmv/765d24e60eb20200f42212b3198ebb26.jpeg',
-    title: 'Mini Fone De Ouvido Sem Fio Bluetooth 5.0 Atender Chamada V9',
-    pricePix: 'R$ 90,00',
-    priceCard: 'R$ 95,00',
-    categorias: ['tecnologia']
-  },
-  {
-    id: 11,
-    image: 'https://a-static.mlcdn.com.br/280x210/kit-capa-teclado-p-tablet-galaxy-tab-a9-plus-pelicula-caneta-touch-mouse-bluetooth-daiotec-solutions/daicommerce/kita9pluscp/23afd80e6708ae2a52ebe3a48750f596.jpeg',
-    title: 'Mini Fone De Ouvido Sem Fio Bluetooth 5.0 Atender Chamada V9',
-    pricePix: 'R$ 90,00',
-    priceCard: 'R$ 95,00',
-    categorias: ['tecnologia']
-  },
+    image: 'https://a-static.mlcdn.com.br/800x560/smartphone-samsung-galaxy-s23-256gb-preto-5g-8gb-ram-61-cam-tripla-selfie-12mp/magazineluiza/232854100/e9fd12e9a66f2797bce34c5169369937.jpg',
+    title: 'Smartphone Samsung Galaxy S23 256GB | 128 Preto 5G 8GB RAM 6,1” Câm Tripla + Selfie 12MP',
+    pricePix: 'R$ 2.799,00',
+    priceCard: 'R$ 3.110,00 em 10x de R$ 311,00 sem juros',
+    categorias: ['tecnologia', 'casa'],
+    link: 'https://divulgador.magalu.com/=vKDOvae'
+  }
 ];

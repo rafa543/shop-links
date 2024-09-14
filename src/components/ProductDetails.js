@@ -109,7 +109,8 @@ function ProductDetails() {
             </Typography>
           </Box>
         </Box>
-        <StyledButton variant="contained" sx={{ lineHeight: 2.2 }}>
+        <StyledButton variant="contained" sx={{ lineHeight: 2.2 }}
+          onClick={() => window.open(item.link, 'blank')}>
           Pegar Promoção
         </StyledButton>
       </StyledContainer>
