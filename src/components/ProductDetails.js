@@ -50,7 +50,7 @@ function ProductDetails() {
   // const { state } = useLocation();
   // const { item } = state;
   const { id } = useParams(); // Obtém o ID da URL
-
+  console.log(id)
   // Busca o item correspondente pelo ID
   const item = items.find((prod) => prod.id === Number(id));
 
